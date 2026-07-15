@@ -1,0 +1,81 @@
+1. Number of Female
+
+   </> DAX
+   Num. of Female = 
+       CALCULATE(
+          COUNTROWS('Dim Customer'),
+          'Dim Customer'[Gender] = "Female"
+       )
+
+2. Percentage of Female
+
+   </> DAX
+   % of Female = 
+      DIVIDE(
+        CALCULATE(
+            COUNTROWS('Dim Customer'),
+            'Dim Customer'[Gender] = "Female"),
+        COUNTROWS('Dim Customer')
+      )
+
+3. Number of Male
+
+   </> DAX
+   Num. of Male = 
+      CALCULATE(
+          COUNTROWS('Dim Customer'),
+          'Dim Customer'[Gender] = "Male"
+     )
+
+4. Percentage of Male
+
+   </> DAX
+   % of Male = 
+      DIVIDE(
+          CALCULATE(
+              COUNTROWS('Dim Customer'),
+              'Dim Customer'[Gender] = "Male"
+           ),
+          COUNTROWS('Dim Customer')
+       )
+
+5. Average Account Balance by Customer
+
+   </> DAX
+   Average Account Blc by customer = 
+      AVERAGEX(
+            VALUES('Dim Customer'[Customer ID]),
+            CALCULATE(
+                AVERAGE('Fact Transaction'[Account Balance])
+            )
+    )
+
+6. Fraud Transaction Amount
+
+   </> DAX
+   Fraud Amount = 
+       CALCULATE(
+          SUM('Fact Transaction'[Amount]),
+          'Fact Transaction'[Fraud] = TRUE()
+       )
+
+7. Fraud Transaction Rate
+
+   </> DAX
+   Fraud Rate = 
+      DIVIDE(
+          CALCULATE(
+              COUNTROWS('Fact Transaction'),
+              'Fact Transaction'[Fraud] = TRUE()),
+          COUNTROWS('Fact Transaction')
+     )
+
+8. Fraud Transactions
+
+  </> DAX
+  Fraud Trans = 
+       CALCULATE(
+                COUNTROWS('Fact Transaction'),
+                'Fact Transaction'[Fraud] = TRUE()
+                )
+   
