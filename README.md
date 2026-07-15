@@ -214,6 +214,27 @@ Based on the analysis, several opportunities were identified:
 5. Implement enhanced fraud monitoring and real-time alerts during the early morning period (00:00–06:59) to identify suspicious activities more effectively.
 6. Continue tracking customer and transaction trends to support proactive risk management.
 
+## Repository Structure
+
+```
+Banking Transaction & Fraud Analytics Dashboard
+│
+├── Dataset
+|    ├── Raw Data.csv
+│
+├── Power BI
+│   └── Banking Transaction & Fraud Analytics Dashboard.pbix
+|   └── DAX Measures
+│
+├── Images
+│   ├── Dashboard Transaction Overview.png
+│   ├── Fraud Analytics.png
+│   ├── Dashboard Customer Demographics.png
+│   ├── Schema.png
+│
+└── README.md
+```
+
 ## Tools Used
 | Tool | Purpose |
 |------|---------|
