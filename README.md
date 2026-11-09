@@ -18,7 +18,7 @@ This dashboard was designed to answer questions such as:
 2. What is the average transaction amount and account balance?
 3. What percentage of transactions are fraudulent?
 4. Which states record the highest fraud transaction amounts?
-5. Which merchant categories are most frequently associated with fraud?
+5. Which transaction device record the highest fraud transaction amounts?
 6. Are certain age groups more susceptible to fraud?
 7. How do transaction patterns vary throughout the month?
 8. What are the characteristics of the bank's customer base?
@@ -145,7 +145,7 @@ Highlights Include:
   
 2️. Fraud Analytics
 
-<img width="886" height="493" alt="image" src="https://github.com/user-attachments/assets/92957149-078e-440b-9c94-421d027f5b76" />
+<img width="1346" height="746" alt="image" src="https://github.com/user-attachments/assets/50a6175b-b967-49a9-874a-27c66146bcb6" />
 
 This page designed to tracking fraud activity and identifying high-risk patterns.
 
@@ -154,10 +154,10 @@ Highlights Include:
 - Total Fraud Amount
 - Fraud Rate
 - Fraud Amount Percentage
-- Fraud Transactions by State
+- Fraud Transactions Amount by State
 - Fraud Transactions by Age Group
 - Fraud Transactions by Week
-- Fraud Transactions by Merchant Category
+- Fraud Transactions Amount by Transaction Devices
 - Fraud Transactions by Time Bucket
 
 3️. Customer Demographics
@@ -197,11 +197,12 @@ These measures support transaction monitoring, fraud detection, and customer ana
 1. 200,000 transactions were processed in January 2025.
 2. Transaction activity peaked during Weeks 2 and 4.
 3. Fraud transactions represented approximately 5% of all transactions.
-4. All fraud transactions were concentrated during the early morning period (00:00:00–06:59:59).
-5. Customers aged 35–44 were among the most represented in fraud-related transactions.
-6. Customer distribution was relatively balanced across most age groups.
-7. Average account balances remained consistent across customer segments.
-8. Gender distribution was nearly evenly split between male and female customers.
+4. Fraud counts were close to equal across the four time windows. Early Morning was the highest at 2,563 cases, and the other windows were within about 100 cases of it. Time of day alone did not separate fraud in this data.
+5. Fraud value was concentrated in a small group of transaction devices out of 20. The top three transaction devices are Self-service banking, ATM booth kiosk and ATM account for ₹161M, about 32% of all fraud value.
+6. The 35-44 group had the most fraud cases (1,960) and the 65+ group the fewest (1,088). However, the 35-44 fraud rate was 5.16% (1,960 of 37,960 transactions), close to the overall 5.04%, so its higher count reflects group size rather than higher risk.
+7. Customer distribution was relatively balanced across most age groups.
+8. Average account balances remained consistent across customer segments.
+9. Gender distribution was nearly evenly split between male and female customers.
 
 ## Recommendations
 
@@ -211,8 +212,9 @@ Based on the analysis, several opportunities were identified:
 2. Introduce risk scoring models for customers exhibiting unusual transaction behaviour.
 3. Monitor transaction activity during peak periods for anomalies.
 4. Develop targeted fraud awareness campaigns for identified customer groups.
-5. Implement enhanced fraud monitoring and real-time alerts during the early morning period (00:00–06:59) to identify suspicious activities more effectively.
-6. Continue tracking customer and transaction trends to support proactive risk management.
+5. Monitor round the clock. Fraud counts were near-equal across time windows, so time-based rules alone would add little.
+6. Apply device-specific controls to ATM and self-service channels (transaction limits, real-time alerts for unusual activity, step-up verification), with baseline monitoring on card and digital channels.
+7. Continue tracking customer and transaction trends to support proactive risk management.
 
 ## Repository Structure
 
